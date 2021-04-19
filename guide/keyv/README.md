@@ -79,7 +79,9 @@ const client = new Discord.Client();
 const prefixes = new Keyv('sqlite://path/to.sqlite');
 const globalPrefix = '.';
 ```
-
+::: warning
+`@keyv/sqlite` is required for this step, which can't be used in Node v14 and greater, you may use any other [third party storage adapter](https://github.com/lukechilds/keyv#third-party-storage-adapters) for sqlite such as `keyv-better-sqlite3` or `@keyvhq/keyv-sqlite` 
+:::
 ### Command handler
 
 This guide uses a very basic command handler with some added complexity to allow for multiple prefixes. Look at the [command handling](/command-handling/) guide for a more robust command handler.
